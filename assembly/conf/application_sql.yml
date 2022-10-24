@@ -11,14 +11,14 @@ flink:
       pipeline.name: stramx_sql_demo
       taskmanager.numberOfTaskSlots: 1
       parallelism.default: 1
-      jobmanager.memory: 1024
+      jobmanager.memory:
         flink.size:
         heap.size:
         jvm-metaspace.size:
         jvm-overhead.max:
         off-heap.size:
         process.size:
-      taskmanager.memory: 1024
+      taskmanager.memory:
         flink.size:
         framework.heap.size:
         framework.off-heap.size:
