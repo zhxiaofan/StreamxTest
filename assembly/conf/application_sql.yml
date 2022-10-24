@@ -13,7 +13,6 @@ flink:
       parallelism.default: 1
       jobmanager.memory: 1024
       taskmanager.memory: 1024
-        managed.fraction: 0.4
   checkpoints:
     enable: false
     interval: 30000
