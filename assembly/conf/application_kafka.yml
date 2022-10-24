@@ -11,15 +11,13 @@ flink:
       pipeline.name: stramx_kafka_demo
       taskmanager.numberOfTaskSlots: 1
       parallelism.default: 1
-      jobmanager.memory:
-        flink.size:
+      jobmanager.memory: 1024
         heap.size:
         jvm-metaspace.size:
         jvm-overhead.max:
         off-heap.size:
         process.size:
-      taskmanager.memory:
-        flink.size:
+      taskmanager.memory: 1024
         framework.heap.size:
         framework.off-heap.size:
         managed.size:
