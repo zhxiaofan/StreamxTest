@@ -13,9 +13,9 @@ public class StreamXSqlDemo {
         for (String arg : args) {
             System.out.println(arg);
         }
-        
+
         TableContext ctx = new TableContext(tableEnvConfig);
-        
+
         ctx.sql("first");
     }
 }
