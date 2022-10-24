@@ -12,21 +12,7 @@ flink:
       taskmanager.numberOfTaskSlots: 1
       parallelism.default: 1
       jobmanager.memory: 1024
-        heap.size:
-        jvm-metaspace.size:
-        jvm-overhead.max:
-        off-heap.size:
-        process.size:
       taskmanager.memory: 1024
-        framework.heap.size:
-        framework.off-heap.size:
-        managed.size:
-        process.size:
-        task.heap.size:
-        task.off-heap.size:
-        jvm-metaspace.size:
-        jvm-overhead.max:
-        jvm-overhead.min:
         managed.fraction: 0.4
   checkpoints:
     enable: false
