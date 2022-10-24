@@ -1,0 +1,28 @@
+first: |
+  create table s1 (
+  `account_id` INT,
+  `service_id` INT,
+  `study_attend_cnt` INT,
+  PRIMARY KEY (`account_id`, `service_id`) NOT ENFORCED
+  ) with (
+  'connector' = 'mysql-cdc',
+  'hostname' = '10.10.32.13',
+  'port' = '3306',
+  'username' = 'cdc',
+  'password' = 'Ot5yksJfLjqVmFqySO',
+  'database-name' = 'wk_biz_nezha',
+  'table-name' = 'agg_student_attend_data_cdc',
+  'server-time-zone' = 'Asia/Shanghai',
+  'scan.startup.mode' = 'latest-offset',
+  'debezium.snapshot.locking.mode' = 'none'
+  );
+
+  create table s2 (
+      account_id INT,
+      service_id INT,
+      study_attend_cnt INT
+  ) with(
+      'connector' = 'print'
+  );
+
+  insert into  s2 select * from s1;
